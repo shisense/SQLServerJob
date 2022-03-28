@@ -1,0 +1,49 @@
+
+
+-- ref: https://www.mssqltips.com/sqlservertip/4921/queries-to-inventory-your-sql-server-agent-jobs/
+
+
+
+
+
+-- ref: https://www.mssqltips.com/sqlservertip/3052/simple-way-to-create-a-sql-server-job-using-tsql/
+
+
+--settup email notification
+-- ref:https://www.mssqltips.com/sqlservertip/1523/how-to-setup-sql-server-alerts-and-email-operator-notifications/
+-- https://www.mssqltips.com/sqlservertip/1100/setting-up-database-mail-for-sql-server/
+
+
+-- set up Gmail SMTP server if you have a GMail account
+-- https://www.siteground.com/kb/gmail-smtp-server/
+-- https://kinsta.com/blog/gmail-smtp-server/
+-- *** https://www.mssqltips.com/sqlservertip/2578/setup-sql-server-database-mail-to-use-a-gmail-hotmail-or-outlook-account/
+
+
+
+
+
+--*********************************************************
+-- create JOB171
+-- make sure SQL Server Agent (Windows Service) is running
+
+-- access denied due to permission 
+-- Sql Server Agent has not permission to exec the cmd
+-- ref to the following:
+-- https://www.mssqltips.com/sqlservertip/6322/sql-server-agent-service-wont-start-due-to-access-denied/
+-- https://docs.microsoft.com/en-us/sql/ssms/agent/create-a-cmdexec-job-step?view=sql-server-ver15#:~:text=To%20create%20a%20CmdExec%20job%20step&text=Expand%20SQL%20Server%20Agent%2C%20create,type%20a%20job%20Step%20name
+-- https://www.red-gate.com/simple-talk/databases/sql-server/database-administration-sql-server/setting-up-your-sql-server-agent-correctly/
+-- https://www.sharepointdiary.com/2014/03/fix-for-powershell-script-cannot-be-loaded-because-running-scripts-is-disabled-on-this-system.html#:~:text=Solution%20for%20%E2%80%9Ccannot%20be%20loaded,Y%E2%80%9D%20when%20prompted%20to%20proceed
+-- "cannot be loaded because running scripts is disabled on this system
+-- https://www.sharepointdiary.com/2014/03/fix-for-powershell-script-cannot-be-loaded-because-running-scripts-is-disabled-on-this-system.html#ixzz7Oh1expfo
+
+#Read more: https://www.sharepointdiary.com/2014/03/fix-for-powershell-script-cannot-be-loaded-because-running-scripts-is-disabled-on-this-system.html#ixzz7Oh15hRsH"
+-- "Set-ExecutionPolicy RemoteSigned Process"
+
+-- get-help set-executionpolicy
+-- Get-ExecutionPolicy -list
+
+--*********************************************************
+
+
+
